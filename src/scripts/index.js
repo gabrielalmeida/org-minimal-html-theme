@@ -92,10 +92,11 @@
   function addBackToTop() {
     var link = doc.createElement('a');
     var container = doc.querySelector('body');
+    var text = options['back-to-top-text'] || 'Back to top';
 
     link.classList.add('back-to-top');
     link.setAttribute('href', 'javascript:scroll(0, 0);');
-    link.innerHTML = '<i></i>Back to top';
+    link.innerHTML = '<i></i>' + text;
 
     container.appendChild(link);
   }
